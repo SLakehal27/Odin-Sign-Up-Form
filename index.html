@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up Form</title>
     <link rel = "stylesheet" href = "styles.css">
+    <script src = "password.js" defer></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     </div>
     <div class = "formcredit">
         <div class = "formlogoarea">
-            <p>Photo by <a>Hannes Marquardt</a> on <a>Unsplash</a></p>
+            <p>Photo by <a href = "https://unsplash.com/fr/@madtley">Hannes Marquardt</a> on <a href = "https://unsplash.com/">Unsplash</a></p>
         </div>
     </div>
 
@@ -31,26 +32,44 @@
             Let's do this!
         </p>
         <div class="formbox">
-            <form>
-                <label for="fname">FIRST NAME</label>
-                <input type = "text" id="fname">
-                <label for="email">EMAIL</label>
-                <input type ="email" id = "email">
-                <label for="password">PASSWORD</label>
-                <input type="password" id = "password">
-            </form>
+            <form id = "odinform">
+                <div>
+                    <div class="formelement">
+                        <label for="fname">FIRST NAME</label>
+                        <input type = "text" id="fname" name = "fname" placeholder="Thor" required>
+                    </div>
+                    <div class="formelement">
+                        <label for="email">EMAIL</label>
+                        <input type ="email" id = "email" name = "email" placeholder="thorodinson@mail.com" required>
+                    </div>
+                    <div class="formelement">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id = "password" name = "password" placeholder="mjolnir2012" required>
+                        <p class = "formerror"></p>
+                    </div>
+                </div>
 
-            <form>
-                <label for="lname">LAST NAME</label>
-                <input type = "text" id="lname">
-                <label for="number">PHONE NUMBER</label>
-                <input type ="number" id = "number">
-                <label for="cpassword">CONFIRM PASSWORD</label>
-                <input type="password" id = "cpassword">
+                <div>
+                    <div class="formelement">
+                        <label for="lname">LAST NAME</label>
+                        <input type = "text" id="lname" name = "lname" placeholder="Odinson" required>
+                    </div>
+    
+                    <div class="formelement">
+                        <label for="number">PHONE NUMBER</label>
+                        <input type ="text" id = "pnumber" name = "pnumber" placeholder="Idk if he has one ._." required>
+                    </div>
+    
+                    <div class="formelement">
+                        <label for="cpassword">CONFIRM PASSWORD</label>
+                        <input type="password" id = "cpassword" name = "cpassword" placeholder="mjolnir2012" required>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
-    <button class = "formbtn">Create Account</button>
+    
+    <button class = "formbtn" form="odinform" onclick="validate()">Create Account</button>
     <p class = "formlogtxt">Already have an account? <a href="#">Log in</a></p>
 </body>
 </html>

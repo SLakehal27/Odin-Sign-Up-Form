@@ -75,18 +75,18 @@ label,input{
     flex-direction: column;
     margin-left: 3vw;
     font-size: 16px;
-    margin-bottom: 10px;
 }
 
 .formbox{
     display: flex;
     gap:24px;
+    font-weight: bold;
 }
 
 .formbtn{
     margin-left: 41vw;
     margin-top: 3rem;
-    background-color:#b06a5c;
+    background:#b06a5c;
     color:#e7ebeb;
     border: none;
     border-radius: 25px;
@@ -94,6 +94,12 @@ label,input{
     width: 12rem;
     padding: 20px 0 20px 0;
     box-shadow: 5px 5px 5px rgb(159, 190, 201);
+    transition: 1s;
+}
+
+.formbtn:hover{
+    background:#7f4838;
+    transition: 0.7s;
 }
 
 .formlogtxt{
@@ -107,6 +113,10 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+    color: #ea6097;
+}
+
 .formcredit .formlogoarea{
     bottom: 0;
     font-size: 24px;
@@ -115,4 +125,38 @@ a{
 
 .formcredit a{
     color: white;
+}
+
+form{
+    display: flex;
+}
+
+.formelement{
+    margin-top: 3vh;
+}
+
+.formelement input{
+    border: 2px solid #E5E7EB; 
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+input:focus{
+    outline: none !important;
+    border: 2px solid aquamarine;
+    box-shadow: 5px 5px 5px rgb(159, 190, 201);
+}
+
+.formlogoarea a{
+    text-decoration: underline;
+}
+
+.formlogoarea a:hover{
+    color: #ea6097;
+}
+
+.formerror{
+    color:red;
+    font-size: 10px;
+    margin-left: 3rem;
 }
